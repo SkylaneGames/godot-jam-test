@@ -67,24 +67,24 @@ jobs:
           path: ./game.zip
           retention-days: 9
 
-  build-osx:
-    runs-on: self-hosted
+  # build-osx:
+  #   runs-on: self-hosted
 
-    steps:
-      - uses: actions/checkout@v6.0.2
+  #   steps:
+  #     - uses: actions/checkout@v6.0.2
       
-      - name: Godot - Build
-        run: mkdir build-osx && godot --headless --log-file build-osx.log --export-release macOS build-osx/game
+  #     - name: Godot - Build
+  #       run: mkdir build-osx && godot --headless --log-file build-osx.log --export-release macOS build-osx/game
       
-      - name: Create Archive
-        run: tar acvf game.zip build-osx/*
+  #     - name: Create Archive
+  #       run: tar acvf game.zip build-osx/*
 
-      - name: Upload a Build Artifact
-        uses: actions/upload-artifact@v7.0.0
-        with:
-          name: game_osx
-          path: ./game.zip
-          retention-days: 9
+  #     - name: Upload a Build Artifact
+  #       uses: actions/upload-artifact@v7.0.0
+  #       with:
+  #         name: game_osx
+  #         path: ./game.zip
+  #         retention-days: 9
          
   # deploy-webgl:
   #   runs-on: windows-latest
