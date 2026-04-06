@@ -14,7 +14,7 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v6.0.2
       
       - name: Godot - Build
         run: mkdir build-webgl && godot --headless --log-file build-webgl.log Web build-webgl
@@ -33,7 +33,7 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v6.0.2
       
       - name: Godot - Build
         run: mkdir build-linux && godot --headless --log-file build-linux.log Linux build-linux
@@ -52,7 +52,7 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v6.0.2
       
       - name: Godot - Build
         run: mkdir build-win64 && godot --headless --log-file build-win64.log Windows build-win64
@@ -71,7 +71,7 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v6.0.2
       
       - name: Godot - Build
         run: mkdir build-osx && godot --headless --log-file build-osx.log macOS build-osx
