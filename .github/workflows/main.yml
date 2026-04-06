@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v6.0.2
       
       - name: Godot - Build
-        run: mkdir build-webgl && godot --headless --log-file build-webgl.log Web build-webgl
+        run: mkdir build-webgl && godot --headless --log-file build-webgl.log Web build-webgl/index.html
       
       - name: Create Archive
         run: tar acvf game.zip build-webgl/*
@@ -36,7 +36,7 @@ jobs:
       - uses: actions/checkout@v6.0.2
       
       - name: Godot - Build
-        run: mkdir build-linux && godot --headless --log-file build-linux.log Linux build-linux
+        run: mkdir build-linux && godot --headless --log-file build-linux.log Linux build-linux/game
       
       - name: Create Archive
         run: tar acvf game.zip build-linux/*
@@ -55,7 +55,7 @@ jobs:
       - uses: actions/checkout@v6.0.2
       
       - name: Godot - Build
-        run: mkdir build-win64 && godot --headless --log-file build-win64.log Windows build-win64
+        run: mkdir build-win64 && godot --headless --log-file build-win64.log Windows build-win64/game.exe
       
       - name: Create Archive
         run: tar acvf game.zip build-linux/*
@@ -74,7 +74,7 @@ jobs:
       - uses: actions/checkout@v6.0.2
       
       - name: Godot - Build
-        run: mkdir build-osx && godot --headless --log-file build-osx.log macOS build-osx
+        run: mkdir build-osx && godot --headless --log-file build-osx.log macOS build-osx/game
       
       - name: Create Archive
         run: tar acvf game.zip build-osx/*
