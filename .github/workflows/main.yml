@@ -23,7 +23,7 @@ jobs:
         run: tar acvf game.zip build-webgl/*
 
       - name: Upload a Build Artifact
-        uses: actions/upload-artifact@v3.2.2
+        uses: actions/upload-artifact@v7.0.0
         with:
           name: game_webgl
           path: ./game.zip
@@ -42,7 +42,7 @@ jobs:
         run: tar acvf game.zip build-linux/*
 
       - name: Upload a Build Artifact
-        uses: actions/upload-artifact@v3.2.2
+        uses: actions/upload-artifact@v7.0.0
         with:
           name: game_linux
           path: ./game.zip
@@ -61,7 +61,7 @@ jobs:
         run: tar acvf game.zip build-linux/*
 
       - name: Upload a Build Artifact
-        uses: actions/upload-artifact@v3.2.2
+        uses: actions/upload-artifact@v7.0.0
         with:
           name: game_win64
           path: ./game.zip
@@ -80,7 +80,7 @@ jobs:
         run: tar acvf game.zip build-osx/*
 
       - name: Upload a Build Artifact
-        uses: actions/upload-artifact@v3.2.2
+        uses: actions/upload-artifact@v7.0.0
         with:
           name: game_osx
           path: ./game.zip
